@@ -1,3 +1,5 @@
+const cssnano = require('cssnano')({ preset: 'default' })
+
 module.exports = {
   plugins: [
     require('postcss-import'),

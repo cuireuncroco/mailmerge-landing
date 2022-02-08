@@ -4,7 +4,13 @@
   "description": "Learn everything you need to know about mail merge in Gmail!",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build-css": "tailwindcss build -i style.css -o assets/css/style.css",
+    "jekyll:dev": "bundle exec jekyll serve --incremental --watch",
+    "jekyll:build": "JEKYLL_ENV=production bundle exec jekyll build",
+    "css:dev": "postcss _sass/main.scss --output assets/css/style.css --watch",
+    "css:build": "NODE_ENV=production postcss _sass/main.scss --output assets/css/style.css",
+    "dev": "concurrently --kill-others \"npm run jekyll:dev\" \"npm run css:dev\"",
+    "build": "npm run css:build && npm run jekyll:build"
   },
   "repository": {
     "type": "git",
@@ -19,10 +25,9 @@
   "homepage": "https://github.com/cuireuncroco/mailmerge-landing#readme",
   "devDependencies": {
     "autoprefixer": "^10.4.2",
+    "concurrently": "^7.0.0",
     "postcss": "^8.4.6",
+    "postcss-cli": "^9.1.0",
     "tailwindcss": "^3.0.19"
-  },
-  "scripts": {
-    "build-css": "tailwindcss build -i style.css -o assets/css/style.css"
   }
 }
