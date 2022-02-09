@@ -1,3 +1,10 @@
-_site
-.sass-cache
+*.DS_Store
+.gitignore/
+ 
+#Jekyll
+**/node_modules
+_site/
+.jekyll-cache
 .jekyll-metadata
+.sass-cache
+vendor/
