@@ -1,0 +1,9 @@
+<!DOCTYPE html>
+<html lang="{{ page.lang | default: site.lang | default: 'en' }}" prefix="og: http://ogp.me/ns#">
+  <head>
+    {%- include head.html -%}
+  </head>
+  <body class="bg-white">
+    {%- include default.header.html -%} {{ content }} {%- include default.footer.html -%}
+  </body>
+</html>
