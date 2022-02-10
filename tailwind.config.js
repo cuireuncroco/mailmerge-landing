@@ -1,8 +1,7 @@
 module.exports = {
-  content: ['./src/**/*.{html,js}', './index.html'],
+  content: ['./_includes/**/*.html', './_layouts/**/*.html', './_posts/*.md', './*.html'],
   theme: {
     extend: {},
   },
   plugins: [],
-  purge: ['./_includes/**/*.html', './_layouts/**/*.html', './_posts/*.md', './*.html'],
 }
