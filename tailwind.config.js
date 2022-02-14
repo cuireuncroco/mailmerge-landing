@@ -1,8 +1,21 @@
 module.exports = {
-  content: ['./src/**/*.{html,js}', './index.html'],
+  content: ['./_includes/**/*.html', './_layouts/**/*.html', './_posts/*.md', './*.html'],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        'Poppins': ['Poppins'],
+      },
+      colors: {
+        'primary-blue': {
+          100: '#D2E3FC',
+          500: '#1a73e8',
+        },
+        'primary-green': {
+          100: '#CEEAD6',
+          500: '#34a853',
+        },
+      },
+    },
   },
   plugins: [],
-  purge: ['./_includes/**/*.html', './_layouts/**/*.html', './_posts/*.md', './*.html'],
 }
